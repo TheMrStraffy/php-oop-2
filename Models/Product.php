@@ -8,7 +8,7 @@ class Product{
   public $isAvailable;
   public $image;
 
-  public function __construct($_id,$_name,$_brand,Category $_category, $_price,$_isAvailable,$_image)
+  public function __construct($_id,$_name,$_brand,Category $_category, $_price,$_isAvailable)
   {
     $this->id=$_id;
     $this->name=$_name;
@@ -16,11 +16,13 @@ class Product{
     $this->category=$_category;
     $this->price=$_price;
     $this->isAvailable=$_isAvailable;
-    $this->image=$_image;
   }
 
   public function getProductDetails(){
     return "ID: $this->id | NAME: $this->name";
+  }
+  public function getProductImage($_image){
+    return $this->image = $_image;
   }
 }
 ?>
